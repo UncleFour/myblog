@@ -1,0 +1,243 @@
+body {
+          margin: 0;
+}
+
+.first {
+          background: skyblue;
+}
+
+.first>div {
+          display: flex;
+          flex-direction: column;
+}
+
+.first .logo {
+          background: url('../images/logo.png') no-repeat center;
+          height: 186px;
+          margin-top: 100px;
+}
+
+.first .text {
+          text-align: center;
+          margin-top: 20px;
+}
+
+.first .text img {
+          margin: 0px 30px;
+          opacity: 0;
+          transition: all 1s;
+}
+
+.first .info {
+          background: url('../images/info_1.png')no-repeat center;
+          height: 49px;
+          margin: 50px;
+}
+
+
+/* 页面1的 动画 效果 */
+
+.first.animating .text img {
+          margin: 0px;
+          opacity: 1;
+}
+
+
+/* 区域2 */
+
+.second {
+          background: yellowgreen;
+}
+
+.second>div {
+          display: flex;
+}
+
+.second .shield {
+          flex: 2;
+          margin-top: 100px;
+          margin-left: 50px;
+}
+
+.second .shield img:nth-child(3) {
+          transform: translate(200px, 300px) rotate(3500deg);
+          transition: all 1s;
+}
+
+.second .info {
+          flex: 3;
+          background: url('../images/info_2.png')no-repeat center;
+}
+
+
+/* 页面2的 动画效果 */
+
+.second.animating img:nth-child(3) {
+          transform: translate(0px) rotate(0deg);
+}
+
+
+/* 页面3 */
+
+.third {
+          background: hotpink;
+}
+
+.third>div {
+          display: flex;
+          position: relative;
+}
+
+.third .info {
+          flex: 1;
+          background: url("../images/info_3.png")no-repeat center;
+}
+
+.third .circle {
+	flex: 1;
+	background: url('../images/circle.png') no-repeat center;
+}
+
+.third .rocket{
+	background: url('../images/rocket.png');
+	width: 203px;
+	height: 204px;
+	position: absolute;
+	left: -203px;
+	bottom: 0px;
+	transition: all 1s;
+}
+/* 页面3don */
+.third.animating .rocket{
+	left: 888px;
+	bottom: 250px;
+}
+
+/* 页面4 */
+.fourth {
+          background: lightgreen;
+}
+
+.fourth>div{
+	display: flex;
+}
+
+.fourth .searchBar{
+	flex: 1;
+	margin-top: 200px;
+	position: relative;
+	transform: translate(-900px,0px);
+	transition:  all 1s;
+}
+
+.searchBar .key{
+	background: url("../images/key.png");
+	width: 0px;
+	height: 22px;
+	position: absolute;
+	top: 22px;
+	left: 15px;
+}
+.searchBar .search{
+	background: url('../images/search.png');
+	width: 529px;
+	height: 66px;
+}
+.searchBar .result{
+	background: url("../images/result.png");
+	width: 529px;
+	height: 0px;
+}
+
+.fourth .info{
+	flex: 1;
+	background: url('../images/info_4.png') no-repeat center;
+}
+
+/* 页面4动画 */
+.fourth.animating .searchBar{
+	transform: translate(0px,0px);
+}
+.fourth.animating .key{
+	width: 99px;
+	transition: all 2.5s 1.5s steps(5,start);
+}
+.fourth.animating .result{
+	height: 372px;
+	transition: all 1s 4s;
+}
+
+/* 区域5 */
+.fifth {
+          background: goldenrod;
+}
+
+.fifth>div{
+	display: flex;
+	flex-direction: column;
+}
+
+.fifth .info{
+	background: url('../images/info_5.png')no-repeat center;
+	height: 134px;
+}
+
+.fifth .brower{
+	width: 1004px;
+	align-self: center;
+	flex: 1;
+	position: relative;
+}
+.fifth .brower .toolBar{
+	background: url('../images/toolbar.png');
+	height: 79px;
+}
+.fifth .brower .extra{
+	background: url('../images/extra.png');
+	width: 394px;
+	height: 29px;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
+
+.fifth .line{
+	position: absolute;
+	opacity: 0;
+}
+
+.lineTop{
+	width: 100%;
+	height: 2px;
+	top: 0px;
+	background: white;
+	transform: translate(1004px,0);
+}
+
+.lineBottom{
+	width: 100%;
+	height: 2px;
+	bottom: 0px;
+	background: white;
+	transform: translate(-1004px,0);
+}
+.lineLeft{
+	width: 2px;
+	height: 100%;
+	left: 0px;
+	background: white;
+	transform: translate(0,-1004px);
+}
+.lineRight{
+	width: 2px;
+	height: 100%;
+	right: 0px;
+	background: white;
+	transform: translate(0,1004px);
+}
+
+.fifth.animating .line{
+	transform: translate(0,0);
+	transition: all 2s;
+	opacity: 1;
+}

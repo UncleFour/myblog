@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+          <meta charset="UTF-8">
+          <title>Document</title>
+          <link rel="stylesheet" type="text/css" href="CSS/main.css">
+          <script type="text/javascript" src='js/jquery-3.0.0.min.js'></script>
+          <script type="text/javascript" src='js/jquery.fullPage.min.js'></script>
+          <script type="text/javascript">
+          $(function() {
+                    $('#fullPage').fullpage({
+                              "afterLoad": function(anchorLink, index) {
+                                        console.log(index);
+                                        // index 从1开始
+                                        // 清除其他的
+                                        $(".section").removeClass("animating");
+                                        // $('.section').eq(index-1).addClass("animating");
+                                        setTimeout(function() {
+                                                  $('.section').eq(index - 1).addClass("animating");
+                                        }, 50);
+                              }
+                    });
+          });
+          </script>
+</head>
+
+<body>
+          <div id="fullPage">
+                    <!-- 区域1 -->
+                    <div class="section first">
+                              <div class='logo'></div>
+                              <div class='text'>
+                                        <img src="images/text_1.png" alt="">
+                                        <img src="images/text_2.png" alt="">
+                                        <img src="images/text_3.png" alt="">
+                                        <img src="images/text_4.png" alt="">
+                                        <img src="images/text_5.png" alt="">
+                                        <img src="images/text_6.png" alt="">
+                                        <img src="images/text_7.png" alt="">
+                                        <img src="images/text_8.png" alt="">
+                              </div>
+                              <div class='info'></div>
+                    </div>
+                    <div class="section second">
+                    </div>
+                    <div class="section third">
+                    </div>
+                    <div class="section fourth">
+                    </div>
+                    <div class="section fifth">
+                    </div>
+          </div>
+</body>
+
+</html>
